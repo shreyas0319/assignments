@@ -1,0 +1,18 @@
+snake_case_variable = "hello"
+camelCaseVariable = [1, 2, 3, 4, 5]
+PascalCaseVariable = {"key": "value"}
+CONSTANT_VARIABLE = 42
+mixedCaseVariable = ("apple", "banana", "cherry")
+
+original_string = "hello"
+reversed_string = original_string[::-1]
+print("Reversed String:", reversed_string)
+
+obj = []
+print("Dir() of an empty list:", dir(obj))
+print("Help() of an empty list:", help(obj))
+
+print("\nAvailable attributes for dir():", dir())
+
+print("\nHelp on 'sorted' function:")
+help(sorted)
