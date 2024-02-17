@@ -1,0 +1,60 @@
+import random
+
+def cow_bull(secret, guess):
+    cow = 0
+    bull = 0
+    for i in range(len(secret)):
+        if secret[i] == guess[i]:
+            cow += 1
+        elif guess[i] in secret:
+            bull += 1
+    return cow, bull
+
+# Example Usage:
+secret_number = str(random.randint(1000, 9999))  # Generate a random 4-digit number as the secret
+print("Welcome to Cow Bull Game!")
+while True:
+    user_guess = input("Enter your guess (4-digit number): ")
+    if len(user_guess) != 4 or not user_guess.isdigit():
+        print("Invalid input! Please enter a 4-digit number.")
+        continue
+    user_guess = user_guess.strip()
+    user_cow, user_bull = cow_bull(secret_number, user_guess)
+    print("Cows:", user_cow, " Bulls:", user_bull)
+    if user_cow == 4:
+        print("Congratulations! You've guessed the correct number:", secret_number)
+        break
+def is_palindrome(s):
+    s = s.lower()  # Convert to lowercase for case-insensitive comparison
+    return s == s[::-1]
+
+# Example Usage:
+word = "level"
+print(f"'{word}' is a palindrome:", is_palindrome(word))
+def fibonacci(n):
+    fib = [0, 1]
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+    return fib[:n]
+
+# Example Usage:
+print("First 10 Fibonacci numbers:", fibonacci(10))
+def custom_range(start, stop=None, step=1):
+    if stop is None:
+        stop = start
+        start = 0
+    result = []
+    while start < stop:
+        result.append(start)
+        start += step
+    return result
+
+# Example Usage:
+print("Custom range from 5 to 10:", custom_range(5, 10))
+print("Custom range from 1 to 10 with step 2:", custom_range(1, 10, 2))
+def my_capitalize(s):
+    return s[0].upper() + s[1:]
+
+# Example Usage:
+word = "hello"
+print("Capitalized:", my_capitalize(word))
