@@ -1,0 +1,106 @@
+# Define a string
+name = "some name"
+
+# Convert to upper case
+upper_case = name.upper()
+print("Upper case:", upper_case)
+
+# Convert to lower case
+lower_case = name.lower()
+print("Lower case:", lower_case)
+
+# Capitalize the string
+capitalized = name.capitalize()
+print("Capitalized:", capitalized)
+
+# Replace 'e' with 'E'
+replaced = name.replace('e', 'E')
+print("Replaced:", replaced)
+Task 2: Manipulate list
+python
+Copy code
+# Define a list
+L = [1, 2, 3]
+
+# Extend the list
+L.extend([5, 6, 7])
+
+# Remove the 5th value
+del L[4]
+
+print("Extended list:", L)
+Task 3: Manipulate dictionary
+python
+Copy code
+# Define a dictionary
+d = {'mango': 10, 'banana': 0, 'apple': 15, 'orange': 0, 'pineapple': 20}
+
+# Remove out of stock fruits (value == 0)
+out_of_stock = [key for key, value in d.items() if value == 0]
+for fruit in out_of_stock:
+    del d[fruit]
+
+# Update mango quantity to 15 and decrease pineapple by 5
+d['mango'] = 15
+d['pineapple'] -= 5
+
+print("Updated dictionary:", d)
+Task 4: Practice slicing problems
+python
+Copy code
+# Given list
+a = [2, 4, 6, 8, 10]
+
+# Problem 1
+a += [12, 14, 16, 18]
+print(a)
+
+# Problem 2
+a[:] = [-i for i in a][::-1] + [0]
+print(a)
+
+# Problem 3
+a[:] = [2, 3, 4, 5, 6, 7, 8, 10]
+print(a)
+
+# Problem 4
+a[3:3] = ['a', 'b', 'c']
+print(a)
+
+# Problem 5
+a = a
+print(a)
+
+# Problem 6
+a[0:0] = []
+print(a[0:0])
+
+# Problem 7
+print(a[::-1])
+
+# Problem 8
+print(a[0:3])
+
+# Problem 9
+print(a[2:])
+
+# Problem 10
+a[1:4] = []
+print(a)
+
+# Problem 11
+print(a[1:4])
+
+# Additional problems (Revised based on the given target lists)
+
+# Problem 12
+a[-1:] = a[1:] + [12, 14, 16, 18, 20]
+print(a)
+
+# Problem 13
+a[:0] = [-i for i in a][::-1] + [0]
+print(a)
+
+# Problem 14
+a[:] = [2, 3, 4, 5, 6, 7, 8, 10]
+print(a)
