@@ -1,0 +1,17 @@
+string = "hello world"
+capitalize_function = string.capitalize()
+upper_function = string.upper()
+lower_function = string.lower()
+
+print("Capitalize function:", capitalize_function)
+print("Replicated .upper() function:", upper_function)
+print("Replicated .lower() function:", lower_function)
+
+given_sequence = [1,2,34,65,1,2,65,66,44,33,22,87,123412,9,78,76]
+odd_sequence = [num for num in given_sequence if num % 2 != 0]
+print("Odd sequence:", odd_sequence)
+
+fruits = {'apple': 10, 'mango': 20, 'pineapple': 25, 'orange': 30, 'strawberry': 50, 'jackfruit': 10}
+
+fruits_more_than_20 = {key: value for key, value in fruits.items() if value > 20}
+print("Fruits with values more than 20:", fruits_more_than_20)
